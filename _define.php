@@ -19,7 +19,7 @@ $this->registerModule(
   /* Name */           "Spam Out",
   /* Description*/     "Interdire les spammeurs sur votre blog à l'aide de RBL",
   /* Author */         "Khaos Farbauti Ibn Oblivion",
-  /* Version */        '1.3',
+  /* Version */        '1.4',
 	/* Permissions */		 'usage,contentadmin'
 );
 ?>
