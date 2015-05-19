@@ -15,7 +15,7 @@
 
 if (!defined('DC_CONTEXT_ADMIN')) { return; }
 
-$page_title = __('Spam Out');
+$page_title = __('SpamOut');
 $default_tab = 'settings';
  
 if (isset($_REQUEST['tab'])) {
@@ -46,7 +46,6 @@ if (isset($_GET['saveconfig']))
 <html>
 <head>
 	<title><?php echo $page_title; ?></title>
-	<?php echo dcPage::jsPageTabs($default_tab); ?>
 </head>
 <body>
 <?php
@@ -62,17 +61,16 @@ if (!empty($msg)) {
 
 <form method="post" action="<?php echo($p_url); ?>">
  <div class="fieldset">
-		<h3><?php echo(__('IP Lookup servers')); ?></h3>
+	<h3><?php echo(__('IP Lookup servers')); ?></h3>
 
-		<p><label class="classic" for="spamout_rbl"><?php echo(__('Add here a coma separated list of servers.')); ?>
-		<?php echo(form::textarea('spamout_rbl',40,3, html::escapeHTML($spamout_rbl),'maximal')); ?>
-		</label></p>
+	<p><label class="classic" for="spamout_rbl"><?php echo(__('Add here a coma separated list of servers.')); ?>
+	<?php echo(form::textarea('spamout_rbl',40,3, html::escapeHTML($spamout_rbl),'maximal')); ?>
+	</label></p>
+ </div>
+<p><?php echo $core->formNonce(); ?></p>
+<p><input type="submit" name="saveconfig" value="<?php echo __('Save'); ?>" /></p>
+</form>
 
-		<p><?php echo $core->formNonce(); ?></p>
-		<p><input type="submit" name="saveconfig"
-		value="<?php echo __('Save'); ?>" /></p>
-	</div>
-	</form>
 <?php dcPage::helpBlock('spamout'); ?>
 </body>
 </html>

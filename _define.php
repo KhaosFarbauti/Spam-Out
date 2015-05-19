@@ -16,10 +16,17 @@
 if (!defined('DC_RC_PATH')) { return; }
  
 $this->registerModule(
-  /* Name */           "Spam Out",
-  /* Description*/     "Interdire les spammeurs sur votre blog à l'aide de RBL",
+  /* Name */           "SpamOut",
+  /* Description*/     "Ban spammers in your blog using RBL",
   /* Author */         "Khaos Farbauti Ibn Oblivion",
-  /* Version */        '1.4',
-	/* Permissions */		 'usage,contentadmin'
+  /* Version */        '1.5',
+	/* Properties */
+	array(
+		'permissions' => 'usage,contentadmin',
+		'type' => 'plugin',
+		'dc_min' => '2.6',
+		'support' => 'http://blog.chaosklub.com/post/2013/08/23/Spam-Out,-nouveau-plugin-pour-Dotclear-2',
+		'details' => 'http://plugins.dotaddict.org/dc2/details/spamout'
+		)
 );
 ?>
